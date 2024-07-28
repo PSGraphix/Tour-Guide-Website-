@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExploreNow - Discover Nearby Places</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">ExploreNow</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#cafes">Cafes</a></li>
+      <li><a href="#tourist-spots">Tourist Spots</a></li>
+      <li><a href="#hotels">Hotels</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Discover Nearby Cafes, Tourist Spots & Hotels</h1>
+    <p>Find the best places around you with just one click!</p>
+    <button class="explore-btn" onclick="locateUser()">Explore Now</button>
+  </header>
+
+  <section class="search-section">
+    <h2>Start Your Adventure</h2>
+    <input type="text" placeholder="Search for a place..." class="search-bar">
+    <div class="filter-options">
+      <button class="filter-btn" onclick="focusMap('cafes')">Cafes</button>
+      <button class="filter-btn" onclick="focusMap('tourist-spots')">Tourist Spots</button>
+      <button class="filter-btn" onclick="focusMap('hotels')">Hotels</button>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Explore the Map</h2>
+    <div id="map"></div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 ExploreNow. All rights reserved.</p>
+  </footer>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRyv11oVuNqX8UnQ6Mg-jramiGJwLuRk0&callback=initMap" async defer></script>
+  <script src="script.js"></script>
+</body>
+</html>
